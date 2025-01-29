@@ -37,14 +37,14 @@ const getUserRegion = () => {
     const path = window.location.pathname;
 
     if (domain.includes(".co.uk")) {
-        return "uk";
+        return "en";
     } else if (domain.includes(".eu")) {
         if (path.startsWith("/cz")) {
-            return "cz"; 
+            return "cz";
         }
-        return "bg"; 
+        return "bg";
     }
-    return "en"; 
+    return "en";
 };
 
 const getApiUrl = () => {

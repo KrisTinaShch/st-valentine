@@ -170,17 +170,23 @@ section.deals {
     content: '';
     width: 15px;
     height: 15px;
-    border: solid white;
+    border: solid #fff;
     border-width: 4px 4px 0 0;
     display: block;
     transform: rotate(45deg);
-    filter: drop-shadow(0 0 5px white);
+    filter: drop-shadow(0 0 5px #fff);
 }
 
 .swiper-button-prev::after {
     transform: rotate(-135deg);
 }
 
+.classicSlider .swiper-button-prev::after,
+.classicSlider .swiper-button-next::after {
+    border: solid var(--light-bloody);
+    border-width: 4px 4px 0 0;
+    filter: drop-shadow(0 0 5px var(--light-bloody));
+}
 
 /* CTA styles */
 .cta-banner {
