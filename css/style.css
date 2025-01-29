@@ -1,0 +1,368 @@
+:root {
+    --main-text: #fff;
+    --description-text: #919191;
+    --light-red: #E91B27;
+    --dark-red: #C81B24;
+    --light-bloody: #E91B27;
+    --dark-bloody: #BF151F;
+    --light-orange: #F48733;
+    --dark-orange: #D2610A;
+    --buy-button: #309833;
+    --dark-green: #3B482F;
+    --light-green: #65AD59;
+    --yellow-badge: #65AD59;
+}
+
+@font-face {
+    font-family: 'GilroyLight';
+    src: url('../fonts/Gilroy-Light.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GilroyExtra';
+    src: url('../fonts/Gilroy-ExtraBold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'GilroyExtra', sans-serif;
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.4em;
+    margin-top: 1em;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+body {
+    color: var(--main-text);
+    font-family: 'GilroyLight', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+section.deals {
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.on-desktop {
+    display: none;
+}
+
+/* Slider styles */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-container {
+    position: relative;
+    text-align: center;
+    font-size: 1em;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    padding: 1.2em;
+    margin: 2em;
+    box-shadow: 0px 0px 6px 3px #ffffffa6;
+    /* min-height: 29em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.slide-container h2 {
+    font-size: 1em;
+    text-transform: none;
+}
+
+.slide-container .discount-percentage__wrapper {
+    position: relative;
+    max-width: 110px;
+    transform: rotate(-20deg);
+    margin-bottom: -2.5em;
+}
+
+.slide-container .discount-percentage {
+    position: absolute;
+    color: var(--main-text);
+    top: 17%;
+    left: 20%;
+}
+
+.slide-container .discount-percentage .old-percentage {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.slide-container .discount-percentage .new-percentage {
+    font-weight: 900;
+    font-size: 1.7em;
+}
+
+.slide-container .exclusive-badge {
+    background: var(--light-bloody);
+    color: var(--main-text);
+    margin: 10px auto;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.slide-container .product-price {
+    margin: 10px 0;
+    color: #e92827;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.slide-container .product-price .old-price {
+    text-decoration: line-through;
+    color: #fd9595;
+}
+
+.slide-container .buy-button {
+    background: var(--buy-button);
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+
+.slide-container .buy-button a {
+    color: var(--main-text);
+    font-size: 2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.swiper-button-next {
+    right: 5px;
+}
+
+.swiper-button-prev {
+    left: 5px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: solid white;
+    border-width: 4px 4px 0 0;
+    display: block;
+    transform: rotate(45deg);
+    filter: drop-shadow(0 0 5px white);
+}
+
+.swiper-button-prev::after {
+    transform: rotate(-135deg);
+}
+
+
+/* CTA styles */
+.cta-banner {
+    position: relative;
+}
+
+.cta-banner p {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 5.3vw;
+    font-weight: bold;
+    font-family: 'GilroyExtra', sans-serif;
+    margin: 0;
+    max-width: 50%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.free-badges {
+    position: absolute;
+    top: 7%;
+    right: 10px;
+    z-index: 1000;
+}
+
+.free-badge {
+    background: #FFCE00;
+    margin-top: 10px;
+    padding: 5px 7px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Valentine Deals */
+.valentine-deals {
+    background: linear-gradient(to bottom, var(--light-red), var(--dark-red));
+}
+
+.mostWantedSlider {
+    position: relative;
+}
+
+.mostWantedSlider .slide-container::before {
+    position: absolute;
+    top: -10px;
+    left: -35px;
+    transform: rotate(-21deg);
+    z-index: 1;
+    background: #FF6E6E;
+    color: #fff;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+
+/* Berry Deals */
+.berry-deals {
+    background: linear-gradient(to bottom, var(--light-bloody), var(--dark-bloody));
+}
+
+/* Cocoa Deals */
+.cocoa-deals {
+    background: linear-gradient(to bottom, var(--light-orange), var(--dark-orange));
+}
+
+/* Matcha Deals */
+.matcha-deals {
+    background: var(--dark-green);
+}
+
+.cta-banner.matcha-deals img {
+    margin-top: -2em;
+}
+
+/* Mint Deals */
+.mint-deals {
+    background: var(--light-green);
+}
+
+/* Classic Deals */
+.classic-deals {
+    color: #000;
+}
+
+.classicSlider .slide-container {
+    box-shadow: 0px 0px 10px 3px #f32d2d4d;
+    border: 3px solid var(--light-red);
+}
+
+.last-banner {
+    position: relative;
+
+}
+
+.last-banner .on-banner_text {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    top: 0;
+    color: var(--main-text);
+}
+
+.last-banner .on-banner_text h2 {
+    margin-top: 1em;
+}
+
+.last-banner .on-banner_text p {
+    margin-bottom: 1em;
+}
+
+.last-banner .on-banner_text .banner-text_button {
+    background: #fff;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--dark-bloody);
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 10px;
+    padding: 0 0.4em;
+}
+
+@media only screen and (min-width: 768px) {
+    .swiper {
+        width: 80%;
+        padding: 70px;
+    }
+
+    .slide-container {
+        margin: 0 3vw;
+    }
+
+    .on-mobile {
+        display: none;
+    }
+
+    .on-desktop {
+        display: block;
+    }
+
+
+    .valentine-deals {
+        padding: 120px 40px;
+    }
+
+    .slide-container .exclusive-badge {
+        max-width: 50%;
+    }
+
+    .slide-container img.slider-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .slide-container .discount-percentage__wrapper {
+        margin-left: -0.5em;
+        margin-top: 0.4em;
+    }
+
+    section.deals p {
+        font-size: 1.1em;
+        max-width: 50%;
+        margin: 1em auto;
+    }
+
+    .cta-banner p {
+        font-size: 4vw;
+        max-width: 40%;
+        left: 25%;
+        line-height: 1.1em;
+    }
+
+    /* Valentine Deals */
+    .mostWantedSlider .slide-container::before {
+        left: -35px;
+        transform: rotate(-16deg);
+        font-size: 1.2vw;
+    }
+}
