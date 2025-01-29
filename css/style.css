@@ -396,4 +396,21 @@ section.deals {
         max-width: 80%;
         margin: 0 auto;
     }
+
+    /* last cta banner */
+    .last-banner .on-banner_text {
+        justify-content: space-around;
+        right: 0;
+        padding-right: 2em;
+        max-width: 40%;
+    }
+
+    .last-banner .on-banner_text h2 {
+        font-size: 3.5em;
+    }
+
+    .last-banner .on-banner_text .banner-text_button {
+        font-size: 3em;
+    }
+
 }
