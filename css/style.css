@@ -255,8 +255,11 @@ section.deals {
     background: var(--dark-green);
 }
 
-.cta-banner.matcha-deals img {
-    margin-top: -2em;
+.matcha-deals__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5em;
 }
 
 /* Mint Deals */
@@ -346,6 +349,13 @@ section.deals {
         margin-top: 0.4em;
     }
 
+    section.deals {
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     section.deals p {
         font-size: 1.1em;
         max-width: 50%;
@@ -364,5 +374,26 @@ section.deals {
         left: -35px;
         transform: rotate(-16deg);
         font-size: 1.2vw;
+    }
+
+    /* Cocoa Deals */
+    .cocoa-deals {
+        min-height: 90vh;
+    }
+
+    /* Mathca Deals */
+    .matcha-deals__wrapper {
+        display: flex;
+        flex-direction: row;
+        margin-top: -10em;
+        align-items: center;
+        max-width: 70%;
+        margin: -7em auto 0 auto;
+    }
+
+    .matcha-deals__wrapper h2 {
+        font-size: 4.5em;
+        max-width: 80%;
+        margin: 0 auto;
     }
 }
